@@ -1,2 +1,3 @@
-# stokes-free-boundary
-MATLAB code that solves a Stokes free boundary problem with dynamic contact angle using isoparametric finite elements in 2D
+# MATLAB solver for Stokes free boundary problem
+
+Description: MATLAB code that solves a Stokes free boundary problem with dynamic contact angle using isoparametric finite elements in 2D
