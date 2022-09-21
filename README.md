@@ -57,7 +57,7 @@ The source code in contained in the directory `./src/` and organized in subfolde
 
 * `./fem` Contains core finite element functionality, e.g., assembly of (local) sparse matrices, elements and quadrature, handling of transformation from reference to actual domain in 1D/2D.
 
-* `./mesh` Sample meshes (generated using triangle). For the moving droplet, this folder  contains droplet meshes with finer/coarser meshes, e.g., `mesh/domain_droplet1x` - `mesh/domain_droplet4x` have 37/128/467/1785/7027 vertices, respectively.
+* `./mesh` Sample meshes (generated using triangle). For the moving droplet, this folder  contains droplet meshes with finer/coarser meshes, e.g., `mesh/domain_droplet1x` - `mesh/domain_droplet5x` have 37/128/467/1785/7027 vertices, respectively.
 
 * `./io` Contains functionality for input and output, e.g., reading and writing meshes and output to Paraview compatible vtk/vtu format.
 
