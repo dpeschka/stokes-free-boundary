@@ -1,14 +1,20 @@
 # MATLAB solves the Stokes free boundary problem
 
 ## Description
-This repository contains a MATLAB code that solves a Stokes free boundary problem with dynamic contact angle using isoparametric finite elements in 2D. This packages provides a self-containted finite element framework using P2/P1 Taylor finite elements and P2 mapping of mesh description. A more detailed explanation of the model and its weak formulation can be found, for example, in the paper
-
+This repository contains a MATLAB code that solves a Stokes free boundary problem with dynamic contact angle using isoparametric finite elements in 2D. This packages provides a self-containted finite element framework using P2/P1 Taylor finite elements and P2 mapping of mesh description. A more detailed explanation of the model and its weak formulation as a saddle point problem for velocity $\mathbf{u}(t):\Omega\to\mathbb{R}^2$ and pressure $\mathbf{p}(t):\Omega\to\mathbb{R}$
+$$
+\begin{align*}
+a(\mathbf{u},\mathbf{v}) - b(p,\mathbf{v})&=f(\mathbf{v})\\
+b(\mathbf{u},q)&=0
+\end{align*} \qquad \text{for all } \mathbf{v},q
+$$
+the time discretization and the motion of the moving domain $\Omega=\Omega(t)$ can be found, for example, in the paper
 
 *Resolving the microscopic hydrodynamics at the moving contact line* 
 by Amal K. Giri, Paolo Malgaretti, Dirk Peschka, Marcello Sega 
 published in Physical Review Fluids (2022).
 
-It solves the following PDE problem:
+Basically, this software solves the following PDE problem:
 
 Conservation of momentum and mass in $\Omega(t)$:
 
@@ -67,4 +73,4 @@ Dirk Peschka, WIAS Berlin, peschka@wias-berlin.de
 
 If you find this software useful and want to use it, I would be happy about feedback. If you use it in the context of an own publication, please cite the paper
 
-*Resolving the microscopic hydrodynamics at the moving contact line*, Amal K. Giri, Paolo Malgaretti, Dirk Peschka, Marcello Sega,Physical Review Fluids (2022).
+*Resolving the microscopic hydrodynamics at the moving contact line*, Amal K. Giri, Paolo Malgaretti, Dirk Peschka, Marcello Sega, Physical Review Fluids (2022).
