@@ -3,12 +3,13 @@
 ## Description
 This repository contains a MATLAB code that solves a Stokes free boundary problem with dynamic contact angle using isoparametric finite elements in 2D. This packages provides a self-containted finite element framework using P2/P1 Taylor finite elements and P2 mapping of mesh description. A more detailed explanation of the model and its weak formulation as a saddle point problem for velocity $\mathbf{u}(t):\Omega\to\mathbb{R}^2$ and pressure $\mathbf{p}(t):\Omega\to\mathbb{R}$
 $$
-\begin{align*}
-a(\mathbf{u},\mathbf{v}) - b(p,\mathbf{v})&=f(\mathbf{v})\\
-b(\mathbf{u},q)&=0
-\end{align*} \qquad \text{for all } \mathbf{v},q
+a(\mathbf{u},\mathbf{v}) - b(p,\mathbf{v})=f(\mathbf{v})
 $$
-the time discretization and the motion of the moving domain $\Omega=\Omega(t)$ can be found, for example, in the paper
+
+$$
+b(\mathbf{u},q)=0
+$$
+(for all test functions $\mathbf{v},q$), the time discretization and the motion of the moving domain $\Omega=\Omega(t)$ can be found, for example, in the paper
 
 *Resolving the microscopic hydrodynamics at the moving contact line* 
 by Amal K. Giri, Paolo Malgaretti, Dirk Peschka, Marcello Sega 
