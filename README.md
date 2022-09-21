@@ -57,7 +57,7 @@ The source code in contained in the directory `./src/` and organized in subfolde
 
 * `./fem` Contains core finite element functionality, e.g., assembly of (local) sparse matrices, elements and quadrature, handling of transformation from reference to actual domain in 1D/2D.
 
-* `./mesh` Sample meshes (generated using triangle)
+* `./mesh` Sample meshes (generated using triangle). For the moving droplet, this folder  contains droplet meshes with finer/coarser meshes, e.g., `mesh/domain_droplet1x` - `mesh/domain_droplet4x` have 37/128/467/1785/7027 vertices, respectively.
 
 * `./io` Contains functionality for input and output, e.g., reading and writing meshes and output to Paraview compatible vtk/vtu format.
 
@@ -66,6 +66,12 @@ The main folder contains the files
 * `problem_elliptic.m`, which solves a standard elliptic problem using isoparametric P2 elements on a disc 
 
 * `stokes_FBP.m`, which solves the actual Stokes free boundary problem. For the Stokes free boundary problem, initialization of finite element matrices is moved to `fem_init.m`, a single time step of the Stokes flow problem is performed in `fem_solveflow.m`, and the mesh motion using ALE techniques is performed in `fem_ALE.m`. The latter three files are not to be called directly but are called from the main file `stokes_FBP.m`. 
+
+
+<img src="src/droplet.gif" width="80%" alignment="center">
+
+**Figure:** Time evolution of droplet based on `stokes_FBP.m` on a moderately fine mesh `mesh/domain_droplet3x` read in `fem_init.m`. Note that finer/coarser meshes might need/allow smaller/larger time step sizes due to a weak mesh dependence $\tau < Ch$.
+
 
 The packages has no dependency on any nonstandard MATLAB packages and was tested with the version R2020a.
 
