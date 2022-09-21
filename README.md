@@ -1,7 +1,7 @@
 # MATLAB solves the Stokes free boundary problem
 
 ## Description
-This repository contains a MATLAB code that solves a Stokes free boundary problem with dynamic contact angle using isoparametric finite elements in 2D. This packages provides a self-containted finite element framework using P2/P1 Taylor finite elements and P2 mapping of mesh description. A more detailed explanation of the model and its weak formulation as a saddle point problem for velocity $\mathbf{u}(t):\Omega\to\mathbb{R}^2$ and pressure $\mathbf{p}(t):\Omega\to\mathbb{R}$
+This repository contains a MATLAB code that solves a Stokes free boundary problem with dynamic contact angle using isoparametric finite elements in 2D. This packages provides a self-containted finite element framework using P2/P1 Taylor finite elements and P2 mapping of mesh description. A more detailed explanation of the model and its weak formulation as a saddle point problem for velocity $\mathbf{u}(t):\Omega\to\mathbb{R}^2$ and pressure $p(t):\Omega\to\mathbb{R}$
 
 $$
 a(\mathbf{u},\mathbf{v}) - b(p,\mathbf{v})=f(\mathbf{v})
